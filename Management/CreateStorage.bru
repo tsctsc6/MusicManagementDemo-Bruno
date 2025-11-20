@@ -1,0 +1,23 @@
+meta {
+  name: CreateStorage
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseURL}}/api/management/create-storage
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "name": "aaa",
+      "path": "D:/"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

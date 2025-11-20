@@ -1,0 +1,22 @@
+meta {
+  name: ReadAllStorage
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseURL}}/api/management/read-all-storage?referenceId=0&pageSize=5&asc=false
+  body: none
+  auth: inherit
+}
+
+params:query {
+  referenceId: 0
+  pageSize: 5
+  asc: false
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

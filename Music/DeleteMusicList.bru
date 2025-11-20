@@ -1,0 +1,22 @@
+meta {
+  name: DeleteMusicList
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseURL}}/api/music/delete-music-list
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "musicListId": "0199382e-7ea1-73d4-80a1-055537847b2e"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

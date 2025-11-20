@@ -1,0 +1,26 @@
+meta {
+  name: CreateJob
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseURL}}/api/management/create-job
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "type": 1,
+      "description": "aaa",
+      "jobArgs": {
+          "storageId": 1
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

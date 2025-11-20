@@ -1,0 +1,20 @@
+meta {
+  name: GetMusicStream
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{baseURL}}/api/music/get-music-stream/01995b24-c74a-7dd3-9f71-e24629ba2d60
+  body: none
+  auth: inherit
+}
+
+headers {
+  Range: bytes=0-256
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

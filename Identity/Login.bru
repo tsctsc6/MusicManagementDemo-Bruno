@@ -1,0 +1,36 @@
+meta {
+  name: Login
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseURL}}/api/identity/login
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "email": "aaa@aaa.com",
+      "password": "Abc@123"
+  }
+}
+
+script:post-response {
+  const response = res.getBody();
+  if (!('data' in response)) {
+      return;
+  }
+  if (!('token' in response.data)) {
+      return;
+  }
+  const jwtToken = response.data.token;
+  bru.setVar("jwt_token", jwtToken);
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

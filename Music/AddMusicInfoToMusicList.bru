@@ -1,0 +1,23 @@
+meta {
+  name: AddMusicInfoToMusicList
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{baseURL}}/api/music/add-music-info-to-music-list
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "musicListId": "019951a3-b9e6-70e7-b96e-f847d6bc84f5",
+      "musicInfoId": "019951a3-d4f7-756a-bf30-9283b864d33a"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

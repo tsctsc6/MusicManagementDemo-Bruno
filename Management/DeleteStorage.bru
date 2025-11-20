@@ -1,0 +1,22 @@
+meta {
+  name: DeleteStorage
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{baseURL}}/api/management/delete-storage
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "id": 1
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

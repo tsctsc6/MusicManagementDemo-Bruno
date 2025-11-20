@@ -1,0 +1,23 @@
+meta {
+  name: GetAllMusicInfoFromMusicList
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{baseURL}}/api/music/get-all-music-info-from-music-list?musicListId=019951a3-b9e6-70e7-b96e-f847d6bc84f5&referenceId=019951a3-d45a-7906-8a44-a8d85dd68691
+  body: none
+  auth: inherit
+}
+
+params:query {
+  musicListId: 019951a3-b9e6-70e7-b96e-f847d6bc84f5
+  referenceId: 019951a3-d45a-7906-8a44-a8d85dd68691
+  ~asc: true
+  ~pageSize: 1
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,16 @@
+meta {
+  name: Music Management Demo
+}
+
+auth {
+  mode: bearer
+}
+
+auth:bearer {
+  token: {{jwt_token}}
+}
+
+vars:pre-request {
+  baseURL: http://localhost:5095
+  jwt_token: 
+}

@@ -1,0 +1,22 @@
+meta {
+  name: CreateMusicList
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseURL}}/api/music/create-music-list
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "name": "New List"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

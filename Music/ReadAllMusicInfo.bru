@@ -1,0 +1,27 @@
+meta {
+  name: ReadAllMusicInfo
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{baseURL}}/api/music/read-all-music-info?asc=true&pageSize=10
+  body: none
+  auth: inherit
+}
+
+params:query {
+  asc: true
+  pageSize: 10
+  ~referenceId: 01993811-8742-74c7-85ff-08d4bace82af
+  ~searchTerm: waiting  as
+}
+
+headers {
+  Range: bytes=0-256
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

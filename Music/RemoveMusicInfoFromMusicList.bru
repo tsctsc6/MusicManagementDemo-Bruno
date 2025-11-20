@@ -1,0 +1,23 @@
+meta {
+  name: RemoveMusicInfoFromMusicList
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseURL}}/api/music/remove-music-info-from-music-list
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "musicListId": "019951a3-b9e6-70e7-b96e-f847d6bc84f5",
+      "musicInfoId": "019951a3-d41e-73d3-ac5b-91536a3ec24a"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

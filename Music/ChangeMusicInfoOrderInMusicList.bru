@@ -1,0 +1,25 @@
+meta {
+  name: ChangeMusicInfoOrderInMusicList
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{baseURL}}/api/music/change-music-info-order-in-music-list
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "musicListId": "019951a3-b9e6-70e7-b96e-f847d6bc84f5",
+      "targetMusicInfoId": "019951a3-d45a-7906-8a44-a8d85dd68698",
+      "PrevMusicInfoId": "019951a3-d4f7-756a-bf30-9283b864d33a",
+      "NextMusicInfoId": null
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

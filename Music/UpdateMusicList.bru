@@ -1,0 +1,23 @@
+meta {
+  name: UpdateMusicList
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseURL}}/api/music/update-music-list
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "musicListId": "01994237-1483-7945-9dd8-7dcbd73f15ec",
+      "name": "NewList2"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
